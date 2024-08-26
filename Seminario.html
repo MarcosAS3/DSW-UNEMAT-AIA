@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com JavaScript, CSS e Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #message-card {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container text-center">
+        <h1 class="mb-4">Exemplo de Interatividade</h1>
+        <button id="show-message-btn" class="btn btn-primary">Mostrar Mensagem</button>
+
+        <div id="message-card" class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Mensagem Secreta</h5>
+                <p class="card-text">Você clicou no botão! Esta mensagem foi revelada através do JavaScript.</p>
+                <button id="hide-message-btn" class="btn btn-danger">Esconder Mensagem</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript Personalizado -->
+    <script>
+        document.getElementById('show-message-btn').addEventListener('click', function() {
+            document.getElementById('message-card').style.display = 'block';
+        });
+
+        document.getElementById('hide-message-btn').addEventListener('click', function() {
+            document.getElementById('message-card').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
